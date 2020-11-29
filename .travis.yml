@@ -1,13 +1,20 @@
 language: C
 
 install:
-- wget https://nginx.org/download/nginx-1.16.1.tar.gz
-- tar -xf nginx-1.16.1.tar.gz 
-- cd nginx-1.16.1/
-- sudo apt-get install build-essential
-- ./configure 
-- sudo apt-get install zlib* gzip* libssl-dev
-- ./configure --sbin-path=/usr/bin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-pcre --pid-path=/var/run/nginx.pid
-- make
-- make install
-- make clean
+  - sudo mkdir /usr/local/src/nginx/
+  - cd /usr/local/src/nginx/
+  - sudo curl -L https://raw.githubusercontent.com/MatthewVance/nginx-build/master/build-nginx.sh -o build_nginx.sh
+  - cat build_nginx.sh (review downloaded code before executing)
+  - sudo chmod +x build_nginx.sh
+  - sudo ./build_nginx.sh
+  - sudo nginx
+# - wget https://nginx.org/download/nginx-1.16.1.tar.gz
+# - tar -xf nginx-1.16.1.tar.gz 
+# - cd nginx-1.16.1/
+# - sudo apt-get install build-essential
+# - ./configure 
+# - sudo apt-get install zlib* gzip* libssl-dev
+# - ./configure --sbin-path=/usr/bin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-pcre --pid-path=/var/run/nginx.pid
+# - make
+# - make install
+# - make clean
