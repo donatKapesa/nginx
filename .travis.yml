@@ -9,3 +9,5 @@ install:
 - sudo apt-get install zlib* gzip* libssl-dev
 - ./configure --sbin-path=/usr/bin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-pcre --pid-path=/var/run/nginx.pid
 - make
+- make install
+- nginx -V
