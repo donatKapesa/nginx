@@ -1,7 +1,7 @@
 language: C
 
 install:
-- wget https://nginx.org/download/nginx-1.16...
+- wget https://nginx.org/download/nginx-1.16.1.tar.gz
 - tar -xf nginx-1.16.1.tar.gz 
 - cd nginx-1.16.1/
 - apt-get install build-essential
