@@ -4,7 +4,7 @@ install:
   - sudo mkdir /usr/local/src/nginx/
   - cd /usr/local/src/nginx/
   - sudo curl -L https://raw.githubusercontent.com/MatthewVance/nginx-build/master/build-nginx.sh -o build_nginx.sh
-  - cat build_nginx.sh (review downloaded code before executing)
+  - cat build_nginx.sh
   - sudo chmod +x build_nginx.sh
   - sudo ./build_nginx.sh
   - sudo nginx
